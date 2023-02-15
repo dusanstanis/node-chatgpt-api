@@ -20,10 +20,12 @@ export default class ChatGPTClient {
             ...modelOptions,
             // set some good defaults (check for undefined in some cases because they may be 0)
             model: modelOptions.model || CHATGPT_MODEL,
-            temperature: typeof modelOptions.temperature === 'undefined' ? 0.8 : modelOptions.temperature,
+            prompt: "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: ",
+            temperature: typeof modelOptions.temperature === 'undefined' ? 0.9 : modelOptions.temperature,
             top_p: typeof modelOptions.top_p === 'undefined' ? 1 : modelOptions.top_p,
-            presence_penalty: typeof modelOptions.presence_penalty === 'undefined' ? 1 : modelOptions.presence_penalty,
-            stop: modelOptions.stop,
+            frequency_penalty: 0,
+            presence_penalty: 0.6,
+            stop: [" Human:", " AI:"],
         };
 
         this.userLabel = this.options.userLabel || 'User';
