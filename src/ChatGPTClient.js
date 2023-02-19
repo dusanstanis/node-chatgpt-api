@@ -20,7 +20,7 @@ export default class ChatGPTClient {
             ...modelOptions,
             // set some good defaults (check for undefined in some cases because they may be 0)
             model: modelOptions.model || CHATGPT_MODEL,
-            prompt: "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: ",
+            prompt: "The following is a conversation with an Dungeon Master for tabletop game. The assistant is helpful, creative, clever..\n\nHuman: ",
             temperature: typeof modelOptions.temperature === 'undefined' ? 0.9 : modelOptions.temperature,
             top_p: typeof modelOptions.top_p === 'undefined' ? 1 : modelOptions.top_p,
             frequency_penalty: 0,
