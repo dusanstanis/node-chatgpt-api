@@ -23,9 +23,9 @@ export default class ChatGPTClient {
             prompt: "The following is a conversation with an Dungeon Master for tabletop game. The assistant is helpful, creative, clever..\n\nHuman: ",
             temperature: typeof modelOptions.temperature === 'undefined' ? 0.9 : modelOptions.temperature,
             top_p: typeof modelOptions.top_p === 'undefined' ? 1 : modelOptions.top_p,
-            frequency_penalty: 0,
-            presence_penalty: 0.6,
-            stop: [" Human:", " AI:"],
+            frequency_penalty: 0.8,
+            presence_penalty: 0.8,
+            stop: ["dusanstanis-interrupt"],
         };
 
         this.userLabel = this.options.userLabel || 'User';
