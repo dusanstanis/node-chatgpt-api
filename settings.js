@@ -15,7 +15,7 @@ export default {
         // (Optional) Parameters as described in https://platform.openai.com/docs/api-reference/completions
         modelOptions: {
             // You can override the model name and any other parameters here.
-            // model: 'text-chat-davinci-002-20221122',
+            model: 'gpt-3.5-turbo',
             // Set max_tokens here to override the default max_tokens of 1000 for the completion.
             // max_tokens: 1000,
         },
@@ -29,7 +29,7 @@ export default {
         // userLabel: 'User',
         // (Optional) Set a custom name for ChatGPT ("ChatGPT" by default)
         // chatGptLabel: 'Bob',
-        // promptPrefix: 'You are Bob, a cowboy in Western times...',
+        promptPrefix: 'You are a Dungeon Master who creates a interesting story based on the cotext I provide you with. You should always keep it interesting and descriptive.',
         // (Optional) Set to true to enable `console.debug()` logging
         debug: false,
     },
